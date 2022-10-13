@@ -34,4 +34,33 @@ padding: 1rem;
 
 .stars span {
     cursor: pointer;
+/* [] is attribute selector */
+}
+a[href="#"]{
+    color: tomato;
+}
+
+a[href^="http"]{
+    border-left: 4px solid tomato;
+}
+/* State related pseudo classes */
+/* LoVe HAte */
+
+nav a,
+nav a:link,
+nav a:visited{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .5s;
+}
+
+nav a:hover,
+nav a:focus{
+    text-decoration: underline;
+    transform: scale(1.4);
+}
+
+nav a:active{
+    transform: scale(1.4) translateX(10px);
 }
