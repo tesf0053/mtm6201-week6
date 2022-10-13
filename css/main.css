@@ -64,3 +64,19 @@ nav a:focus{
 nav a:active{
     transform: scale(1.4) translateX(10px);
 }
+
+/* Pseudo element */
+a[href$=".pdf"]::after{
+    content: "\2913";
+    font-size: 1.25rem;
+    color: tomato;
+}
+h2+p::first-line{
+    color: tomato;
+}
+h3+p::first-letter{
+    background-color: rgb(40, 0, 220);
+    color: white;
+    padding: .25rem;
+    margin: .10rem;
+}
