@@ -1,3 +1,12 @@
+:root{
+  --special-color: tomato; 
+  --second-color: purple;
+  --light-color: white;
+  --dark-color: black; 
+
+}
+
+
 .container{
     max-width: 900px;
     margin: 0 auto;
@@ -22,7 +31,7 @@ main > p{
 
 /* + is adjecent combinator  */
 h2 + p{
-background-color: black;
+background-color: var(--dark-color);
 color: white;
 padding: 1rem;
 }
@@ -41,7 +50,7 @@ a[href="#"]{
 }
 
 a[href^="http"]{
-    border-left: 4px solid tomato;
+    border-left: 4px solid var(--special-color);
 }
 /* State related pseudo classes */
 /* LoVe HAte */
@@ -79,4 +88,13 @@ h3+p::first-letter{
     color: white;
     padding: .25rem;
     margin: .10rem;
+}
+/* calc() function */
+.google{
+    display: block;
+    background-color: lavender;
+    width: calc(100% - 6rem - 4px );
+    padding: 2rem;
+    margin: 1rem;
+    /* also there is a 4px border on the left */
 }
